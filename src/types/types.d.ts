@@ -17,7 +17,7 @@ export type Para = {
 	weekday: number;
 	para: number;
 	lesson: Lesson;
-	teachers: Array<any>;
+	teachers: Array<Teacher>;
 	cabinet: Cabinet;
 	subgroup: number;
 	schedule_id: number;
