@@ -11,8 +11,9 @@ export async function getSchedule(date: number): Promise<string> {
 			`https://api.it-reshalo.ru//schedule?filter=41&type=group&date=${Math.floor(todayDate.setHours(3) / 1000)}`,
 		);
 		const schedule = response.data.result.final.reverse();
+		const bells = response.data.result.bell;
 
-		answer = makeAnswer(schedule, date);
+		answer = makeAnswer(schedule, date, bells);
 
 		return answer;
 	} catch (error) {

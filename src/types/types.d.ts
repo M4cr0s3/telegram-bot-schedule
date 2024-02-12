@@ -6,10 +6,16 @@ export type ReshaloResponse = {
 export type Result = {
 	change: Array<any>;
 	main: Array<any>;
-	bell: Array<any>;
+	bell: Bell[];
 	final: Array<Para>;
 	mode: string;
 };
+
+export type Bell = {
+	start_time: string
+	end_time: string
+	para: number
+}
 
 export type Para = {
 	id: number;
